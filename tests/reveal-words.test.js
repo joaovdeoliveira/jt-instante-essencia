@@ -2,7 +2,6 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { revealWords } from '../js/reveal-words.js';
 
-// DOM mínimo: só o que revealWords usa (childNodes, nodeType, textContent, replaceWith, createElement).
 const doc = { createElement: () => ({ nodeType: 1, childNodes: [], style: {} }) };
 const asNode = (n) => (typeof n === 'string' ? { nodeType: 3, textContent: n } : n);
 function el(...children) {

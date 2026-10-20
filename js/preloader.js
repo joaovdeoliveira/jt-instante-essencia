@@ -1,16 +1,10 @@
-/** Curva de animação "ease-in-out quart" para t entre 0 e 1. */
 export const easeInOutQuart = (t) => (t < 0.5 ? 8 * t ** 4 : 1 - (-2 * t + 2) ** 4 / 2);
 
-/** Desenho SVG da borda curva da cortina; progress 0 = curva cheia, 1 = reta. */
 export const curtainPath = (progress) => `M0 0 H1000 Q500 ${320 * (1 - progress)} 0 0 Z`;
 
 const LOADING_CLASS = 'is-loading';
 const REDUCED_WORD_MS = 250;
 
-/**
- * Tela de abertura: mostra uma sequência de palavras e depois sobe como cortina.
- * Recebe os elementos e as opções por parâmetro, então não conhece seletores nem textos.
- */
 export class Preloader {
   #root;
   #element;

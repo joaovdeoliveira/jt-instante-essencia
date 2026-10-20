@@ -1,10 +1,5 @@
 const TEXT_NODE = 3;
 
-/**
- * Envolve cada palavra de `element` num <span class="tg-word"> com atraso crescente,
- * mantendo as tags internas (<em>, <br>...). O CSS faz a palavra surgir.
- * Devolve o instante, em ms, em que a próxima palavra começaria.
- */
 export function revealWords(element, { startMs = 0, stepMs = 200 } = {}) {
   let delay = startMs;
   const visit = (node) => {
@@ -14,7 +9,7 @@ export function revealWords(element, { startMs = 0, stepMs = 200 } = {}) {
         continue;
       }
       const parts = child.textContent.split(/(\s+)/).filter(Boolean).map((part) => {
-        if (!part.trim()) return part; // espaço continua texto puro
+        if (!part.trim()) return part;
         const span = element.ownerDocument.createElement('span');
         span.className = 'tg-word';
         span.textContent = part;
