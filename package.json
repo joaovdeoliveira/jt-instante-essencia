@@ -1,0 +1,9 @@
+{
+  "name": "jt-instante-e-essencia",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "npx --yes http-server . -p 8080 -c-1",
+    "test": "node --test"
+  }
+}

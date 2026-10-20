@@ -1,0 +1,8 @@
+# Skills de agentes instaladas localmente (não fazem parte do site)
+.agents/
+.claude/
+skills-lock.json
+
+# Saída de ferramentas
+.playwright-mcp/
+node_modules/
